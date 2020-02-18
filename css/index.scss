@@ -1,0 +1,192 @@
+@import "./variable";
+
+*,
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0%;
+  padding: 0%;
+  position: relative;
+  font-family: "微軟正黑體";
+
+  #treeCanvas {
+    position: absolute;
+    width: 83.33%;
+    /*Change this in order to change space that the branch takes*/
+    height: 71, 4%;
+    /*Change this in order to change space that the branch takes*/
+    z-index: -2;
+    right: 0;
+    display: none;
+}
+
+#leavesCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+  #banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .banner_img {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+
+      & img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: bottom;
+      }
+
+      // @media (max-width: 320px) {
+      //     background-image: url(https://cdn.pixabay.com/photo/2017/01/13/08/08/tori-1976609_960_720.jpg);
+      //     background-size: cover;
+      //     background-position: center;
+      //     height: 100vh;
+      // }
+    }
+
+    .sakurasvg {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+    }
+
+    // .sakura {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   max-width: 100%;
+    //   max-height: 100vh;
+    // }
+    .layersvg {
+      position: absolute;
+      max-width: 100%;
+      /* left: -10px; */
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
+
+  .navbar {
+    background-color: #ffffff;
+
+    .container {
+      max-width: 1170px;
+
+      a {
+        display: flex;
+        align-items: center;
+        transition: 0.5s;
+        img{
+          width: 48px;
+          height: 48px;
+          margin-right: 20px;
+        }
+      }
+
+      a:hover {
+        transform: scale(1.1);
+      }
+      .navbar-collapse{
+        li{
+          display: flex;
+          align-items: center;
+        }
+        & a img{
+          margin-left: 10px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  main {
+    #section_1 {
+      width: 100%;
+      height: 100vh;
+      background-color: #c0d4ee;
+
+      svg {
+        padding: 20px 0px 0px 0px;
+
+        path {
+          transition: 0.5s;
+        }
+
+        path:hover {
+          fill: rgba(0, 0, 0, 0.5);
+          -webkit-transform: translate(-5px, -5px);
+          transform: translate(-5px, -5px);
+        }
+
+        .isolation:hover {
+          -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+        }
+      }
+    }
+
+    #section_2 {
+      width: 100%;
+      height: 100vh;
+      background-color: $color3;
+
+      .swiper-image-inner {
+        h1 {
+          font-size: 72px;
+          text-shadow:
+          -2px -2px 2px #222222,
+          -4px -4px 2px #222222;
+        }
+
+        span {
+          font-size: 72px;
+          text-shadow:
+          -2px -2px 2px #222222,
+          -4px -4px 2px #222222;
+        }
+      }
+
+      p {
+        font-size: 32px;
+        font-weight: 1000;
+        text-shadow:-2px -2px 2px #222222,-4px -4px 2px #222222;
+      }
+    }
+  }
+
+  footer {
+    width: 100%;
+    background-color: $color4;
+
+    .footer_team {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .footer_ul {
+        list-style: none;
+        line-height: 40px;
+        margin: 20px 0;
+        display: flex;
+
+        .team_li {
+          color: #ffffff;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
